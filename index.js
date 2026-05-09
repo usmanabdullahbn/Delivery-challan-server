@@ -7,6 +7,7 @@ import dcRoutes from "./routes/dcRoutes.js";
 import customerRoutes from "./routes/customerRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import pdfRoutes from "./routes/pdfRoutes.js";
+import stockRoutes from "./routes/stockRoutes.js";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ mongoose
 app.use("/api/dc", dcRoutes);
 app.use("/api/customers", customerRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/stock", stockRoutes);
 app.use("/api/pdf", pdfRoutes);
 
 // Health check

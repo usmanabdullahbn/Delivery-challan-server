@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
     if (search) {
       query.$or = [
         { name: { $regex: search, $options: "i" } },
-        { sku: { $regex: search, $options: "i" } },
+        { code: { $regex: search, $options: "i" } },
         { category: { $regex: search, $options: "i" } },
       ];
     }

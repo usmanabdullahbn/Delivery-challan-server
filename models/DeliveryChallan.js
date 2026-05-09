@@ -2,11 +2,13 @@ import mongoose from "mongoose";
 
 const itemSchema = new mongoose.Schema({
   productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product", default: null },
+  code: { type: String, default: "" },
   name: { type: String, required: true },
   description: { type: String, default: "" },
   unit: { type: String, default: "Nos" },
   qty: { type: Number, required: true, min: 1 },
   rate: { type: Number, default: 0 },
+  discount: { type: Number, default: 0 }, // Discount in %
 });
 
 const dcSchema = new mongoose.Schema(
@@ -27,6 +29,7 @@ const dcSchema = new mongoose.Schema(
       enum: ["invoice", "delivered", "cancelled"],
       default: "invoice",
     },
+    discount: { type: Number, default: 0 }, // Discount in PKR or percentage
   },
   { timestamps: true }
 );

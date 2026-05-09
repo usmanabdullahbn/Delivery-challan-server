@@ -7,7 +7,9 @@ const productSchema = new mongoose.Schema(
     unit: { type: String, default: "Nos" },
     rate: { type: Number, default: 0 },
     category: { type: String, default: "General" },
-    sku: { type: String, default: "" },
+    code: { type: String, default: "" },
+    stock: { type: Number, default: 0, min: 0 },
+    minStockLevel: { type: Number, default: 10 },
     isActive: { type: Boolean, default: true },
   },
   { timestamps: true }
