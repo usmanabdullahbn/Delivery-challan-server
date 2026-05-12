@@ -8,6 +8,8 @@ import customerRoutes from "./routes/customerRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import pdfRoutes from "./routes/pdfRoutes.js";
 import stockRoutes from "./routes/stockRoutes.js";
+import vendorRoutes from "./routes/vendorRoutes.js";
+import purchaseRoutes from "./routes/purchaseRoutes.js";
 
 dotenv.config();
 
@@ -29,6 +31,8 @@ app.use("/api/dc", dcRoutes);
 app.use("/api/customers", customerRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/stock", stockRoutes);
+app.use("/api/vendors", vendorRoutes);
+app.use("/api/purchases", purchaseRoutes);
 app.use("/api/pdf", pdfRoutes);
 
 // Health check

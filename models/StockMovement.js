@@ -12,7 +12,7 @@ const stockMovementSchema = new mongoose.Schema(
     quantity: { type: Number, required: true, min: 1 },
     reason: {
       type: String,
-      enum: ["manual_in", "manual_out", "dc_created", "dc_deleted", "dc_updated"],
+      enum: ["manual_in", "manual_out", "dc_created", "dc_deleted", "dc_updated", "purchase_received", "purchase_cancelled", "purchase_updated"],
       required: true,
     },
     date: { type: Date, default: Date.now },
